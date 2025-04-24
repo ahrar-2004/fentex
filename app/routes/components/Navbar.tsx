@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from '../../../public/logo.png'; // Adjust this if needed (use /logo.png if it's in public folder)
+import React, { useState } from 'react';
+import logo from '/logo.png'; // Adjust path if not from public/
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
-    <nav className="bg-green-100 text-green-900 shadow-md fixed w-full z-50">
+    <nav className="bg-green-50 text-green-900 shadow fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
-        
+
         {/* Logo */}
         <div className="flex items-center">
           <img 
             src={logo} 
             alt="Fēntex Logo"
-            width={80}
-            height={80}
-            className="w-16 h-16 object-contain"
+            className="w-12 h-12 object-contain"
           />
         </div>
 
-        {/* Nav Links */}
-        <ul className="hidden md:flex space-x-6 text-sm font-medium">
+        {/* Desktop Nav Links */}
+        <ul className="hidden md:flex space-x-5 text-sm font-medium">
           <li><a href="#hero" className="hover:text-green-600 transition">Home</a></li>
           <li><a href="#about" className="hover:text-green-600 transition">About</a></li>
           <li><a href="#categories" className="hover:text-green-600 transition">Categories</a></li>
@@ -28,13 +30,28 @@ const Navbar = () => {
           <li><a href="#contact" className="hover:text-green-600 transition">Contact</a></li>
         </ul>
 
-        {/* Mobile Menu Button (Placeholder) */}
+        {/* Mobile Hamburger Icon */}
         <div className="md:hidden">
-          <button className="text-green-800 text-xl focus:outline-none">
-            &#9776;
+          <button onClick={toggleMenu} className="text-2xl focus:outline-none">
+            ☰
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-green-100 px-6 pb-4">
+          <ul className="flex flex-col space-y-3 text-sm font-medium">
+            <li><a href="#hero" onClick={toggleMenu}>Home</a></li>
+            <li><a href="#about" onClick={toggleMenu}>About</a></li>
+            <li><a href="#categories" onClick={toggleMenu}>Categories</a></li>
+            <li><a href="#featured" onClick={toggleMenu}>Featured</a></li>
+            <li><a href="#why" onClick={toggleMenu}>Why Us</a></li>
+            <li><a href="#reviews" onClick={toggleMenu}>Reviews</a></li>
+            <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

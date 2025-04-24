@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import logo from '/logo.png'; // Adjust path if not from public/
+import logo from '/logo.png'; // Make sure logo.png is in your /public folder
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="bg-green-50 text-green-900 shadow fixed w-full z-50">
+    <nav className="bg-[#DFF6DD] text-[#1B5E20] shadow fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
 
         {/* Logo */}
@@ -19,20 +18,20 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Desktop Nav Links */}
-        <ul className="hidden md:flex space-x-5 text-sm font-medium">
-          <li><a href="#hero" className="hover:text-green-600 transition">Home</a></li>
-          <li><a href="#about" className="hover:text-green-600 transition">About</a></li>
-          <li><a href="#categories" className="hover:text-green-600 transition">Categories</a></li>
-          <li><a href="#featured" className="hover:text-green-600 transition">Featured</a></li>
-          <li><a href="#why" className="hover:text-green-600 transition">Why Us</a></li>
-          <li><a href="#reviews" className="hover:text-green-600 transition">Reviews</a></li>
-          <li><a href="#contact" className="hover:text-green-600 transition">Contact</a></li>
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex space-x-6 text-sm font-medium">
+          <li><a href="#hero" className="hover:text-[#4E9F3D] transition">Home</a></li>
+          <li><a href="#about" className="hover:text-[#4E9F3D] transition">About</a></li>
+          <li><a href="#categories" className="hover:text-[#4E9F3D] transition">Categories</a></li>
+          <li><a href="#featured" className="hover:text-[#4E9F3D] transition">Featured</a></li>
+          <li><a href="#why" className="hover:text-[#4E9F3D] transition">Why Us</a></li>
+          <li><a href="#reviews" className="hover:text-[#4E9F3D] transition">Reviews</a></li>
+          <li><a href="#contact" className="hover:text-[#4E9F3D] transition">Contact</a></li>
         </ul>
 
-        {/* Mobile Hamburger Icon */}
+        {/* Mobile Hamburger */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-2xl focus:outline-none">
+          <button onClick={toggleMenu} className="text-2xl text-[#1B5E20] focus:outline-none">
             ☰
           </button>
         </div>
@@ -40,8 +39,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-green-100 px-6 pb-4">
-          <ul className="flex flex-col space-y-3 text-sm font-medium">
+        <div className="md:hidden bg-[#CDE990] px-6 pb-4">
+          <ul className="flex flex-col space-y-3 text-sm font-medium text-[#1B5E20]">
             <li><a href="#hero" onClick={toggleMenu}>Home</a></li>
             <li><a href="#about" onClick={toggleMenu}>About</a></li>
             <li><a href="#categories" onClick={toggleMenu}>Categories</a></li>

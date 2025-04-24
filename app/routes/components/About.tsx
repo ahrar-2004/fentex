@@ -7,7 +7,7 @@ function About() {
         {/* Left Image */}
         <div className="relative">
           <img 
-            src="/public/warehouse.jpg" 
+            src="/public/ware.jpg" 
             alt="Fentex Warehouse" 
             className="rounded-xl shadow-md w-full object-cover h-96" 
           />

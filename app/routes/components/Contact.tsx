@@ -58,7 +58,7 @@ function Contact() {
                 <textarea
                   id="message"
                   name="message"
-                  rows="5"
+                  
                   required
                   className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4E9F3D]"
                 ></textarea>

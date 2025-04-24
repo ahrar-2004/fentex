@@ -17,7 +17,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-[#DFF6DD] flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-20">
+    <section id='hero' className="min-h-screen bg-[#DFF6DD] flex flex-col md:flex-row items-center justify-center px-6 md:px-12 py-20">
       {/* Left Content */}
       <div className="md:w-1/2 text-center md:text-left space-y-6 z-10">
         <span className="inline-block bg-[#CDE990] text-[#1B5E20] px-4 py-1 rounded-full font-medium text-sm">

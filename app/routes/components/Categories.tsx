@@ -4,41 +4,61 @@ const categories = [
   {
     title: 'Fresh Vegetables',
     image: '/freshveg.jpg',
-    description: 'A colorful variety of farm-fresh vegetables, perfect for a healthy lifestyle and packed with essential nutrients.',
+    description: 'Locally sourced vegetables, freshly harvested and perfect for wholesale distribution.',
   },
   {
     title: 'Fresh Fruits',
     image: '/fruit.jpg',
-    description: 'Juicy and sweet seasonal fruits, handpicked for freshness. Great for snacking, smoothies, or desserts.',
+    description: 'Seasonal and exotic fruits delivered fresh and in bulk for your business.',
   },
   {
     title: 'Seafood',
     image: '/seafood.jpg',
-    description: 'A delicious selection of seafood from the ocean—fish, shrimp, crabs, and more. Perfect for grilling, frying, or steaming.',
+    description: 'Top-quality fish, shrimp, and shellfish sourced from trusted suppliers.',
   },
   {
     title: 'Meat Products',
     image: '/meat.jpg',
-    description: 'High-quality cuts of meat including beef, lamb, and chicken. Ideal for everyday meals or special occasions.',
-  },
-  {
-    title: 'Prepared Foods',
-    image: '/Prepared.jpg',
-    description: 'Ready-to-eat meals and snacks, freshly made for your convenience without compromising on taste.',
+    description: 'Premium cuts of beef, lamb, and poultry available in large volumes.',
   },
   {
     title: 'Dairy & Eggs',
     image: '/dairy.jpg',
-    description: 'Pure dairy products like milk, cheese, yogurt, and farm-fresh eggs to enrich your breakfast and recipes.',
+    description: 'Milk, cheese, butter, and farm-fresh eggs for consistent kitchen supply.',
+  },
+  {
+    title: 'Prepared Foods',
+    image: '/Prepared.jpg',
+    description: 'Convenient, ready-to-eat items for restaurants, cafes, and meal services.',
+  },
+  {
+    title: 'Frozen Goods',
+    image: '/frozen.jpg',
+    description: 'High-quality frozen vegetables, meats, and ready-meals for storage and convenience.',
+  },
+  {
+    title: 'Bakery & Breads',
+    image: '/bakery.jpg',
+    description: 'Fresh baked goods, breads, and buns ready for daily delivery.',
+  },
+  {
+    title: 'Snacks & Spices',
+    image: '/snacks.png',
+    description: 'Bulk snack items and essential spices from around the world.',
+  },
+  {
+    title: 'Beverages',
+    image: '/Beverages.webp',
+    description: 'Juices, soft drinks, teas, and bottled water available in wholesale quantities.',
   },
 ];
 
 const Categories = () => {
   return (
-    <section  id='categories' className="py-16 px-4 bg-cyan-50 text-cyan-900">
+    <section id="categories" className="py-16 px-4 bg-[#DFF6DD] text-[#1B5E20]">
       <div className="max-w-5xl mx-auto text-center mb-10">
-        <h2 className="text-3xl font-bold text-cyan-800">Our Product Categories</h2>
-        <p className="text-cyan-600">Explore the flavors, freshness, and variety we offer in every category.</p>
+        <h2 className="text-3xl font-bold text-[#4E9F3D]">Our Product Categories</h2>
+        <p className="text-[#1B5E20]">Explore our wide range of wholesale food and beverage categories tailored for your business.</p>
       </div>
 
       <div className="space-y-10 max-w-6xl mx-auto">
@@ -53,8 +73,8 @@ const Categories = () => {
               className="w-full md:w-1/2 h-64 object-cover"
             />
             <div className="p-6 text-left md:w-1/2">
-              <h3 className="text-2xl font-semibold text-cyan-900 mb-2">{category.title}</h3>
-              <p className="text-cyan-700">{category.description}</p>
+              <h3 className="text-2xl font-semibold text-[#4E9F3D] mb-2">{category.title}</h3>
+              <p className="text-[#1B5E20]">{category.description}</p>
             </div>
           </div>
         ))}

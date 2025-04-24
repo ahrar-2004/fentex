@@ -31,7 +31,7 @@ const Navbar = () => {
 
         {/* Mobile Hamburger */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-2xl text-[#1B5E20] focus:outline-none">
+          <button onClick={toggleMenu} className="text-3xl text-[#1B5E20] focus:outline-none">
             ☰
           </button>
         </div>
@@ -39,8 +39,8 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-[#CDE990] px-6 pb-4">
-          <ul className="flex flex-col space-y-3 text-sm font-medium text-[#1B5E20]">
+        <div className="md:hidden bg-[#DFF6DD] text-[#1B5E20] px-6 py-4 shadow transition-all duration-300">
+          <ul className="flex flex-col space-y-3 text-sm font-medium">
             <li><a href="#hero" onClick={toggleMenu}>Home</a></li>
             <li><a href="#about" onClick={toggleMenu}>About</a></li>
             <li><a href="#categories" onClick={toggleMenu}>Categories</a></li>
